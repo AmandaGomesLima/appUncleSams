@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uncle_sam/cadastro.dart';
+import 'package:uncle_sam/login.dart';
+import 'package:uncle_sam/sobre.dart';
 
 
 class MyHomePage extends StatefulWidget {
@@ -23,7 +25,21 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
-  void onPressed() {
+  void onSobrePressed() {
+    Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const SobrePage(title: 'Sobre'))
+    );
+  }
+
+  void onEntrarPressed() {
+    Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const LoginPage(title: 'Entrar'))
+    );
+  }
+
+  void onCadastrarPressed() {
     Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const CadastroPage(title: 'Cadastro'))
@@ -49,17 +65,40 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image(image: AssetImage('assets/images/logo.png')),
+            const Padding (
+                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 36),
+                child: Image(image: AssetImage('assets/images/logo.png'))
+            ),
             Padding (
-              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 16),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  border: UnderlineInputBorder(),
-                  labelText: 'Email',
+              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 6),
+              child: SizedBox(
+                width: 150.0,
+                child: ElevatedButton(
+                  onPressed: onSobrePressed,
+                  child: const Text('Sobre'),
                 ),
               )
             ),
-            ElevatedButton(onPressed: onPressed, child: const Text('Cadastro'))
+            Padding (
+                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 6),
+                child: SizedBox(
+                  width: 150.0,
+                  child: ElevatedButton(
+                    onPressed: onEntrarPressed,
+                    child: const Text('Entrar'),
+                  ),
+                )
+            ),
+            Padding (
+                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 6),
+                child: SizedBox(
+                  width: 150.0,
+                  child: ElevatedButton(
+                    onPressed: onCadastrarPressed,
+                    child: const Text('Cadastrar-me'),
+                  ),
+                )
+            ),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.

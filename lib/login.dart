@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:uncle_sam/cadastro.dart';
 
 
-class CadastroPage extends StatefulWidget {
-  const CadastroPage({super.key, required this.title});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -17,10 +17,10 @@ class CadastroPage extends StatefulWidget {
   final String title;
 
   @override
-  State<CadastroPage> createState() => _CadastroPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _CadastroPageState extends State<CadastroPage> {
+class _LoginPageState extends State<LoginPage> {
   int _counter = 0;
 
   void onPressed() {
@@ -47,26 +47,9 @@ class _CadastroPageState extends State<CadastroPage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Padding (
-                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 16),
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                    border: UnderlineInputBorder(),
-                    labelText: 'Nome',
-                  ),
-                )
-            ),
-            Padding (
-                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 16),
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                    border: UnderlineInputBorder(),
-                    labelText: 'Telefone',
-                  ),
-                )
-            ),
+            Image(image: AssetImage('assets/images/logo.png')),
             Padding (
               padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 16),
               child: TextFormField(
@@ -77,7 +60,7 @@ class _CadastroPageState extends State<CadastroPage> {
               )
             ),
             Padding (
-                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 6),
                 child: TextFormField(
                   obscureText: true,
                   decoration: const InputDecoration(
@@ -86,17 +69,7 @@ class _CadastroPageState extends State<CadastroPage> {
                   ),
                 )
             ),
-            Padding (
-                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 16),
-                child: TextFormField(
-                  obscureText: true,
-                  decoration: const InputDecoration(
-                    border: UnderlineInputBorder(),
-                    labelText: 'Confirmar senha',
-                  ),
-                )
-            ),
-            ElevatedButton(onPressed: onPressed, child: const Text('Cadastrar'))
+            ElevatedButton(onPressed: onPressed, child: const Text('Entrar'))
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
