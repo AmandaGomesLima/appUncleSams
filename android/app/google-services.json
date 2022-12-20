@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "195084400379",
+    "project_id": "uncle-sam-bebb0",
+    "storage_bucket": "uncle-sam-bebb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195084400379:android:4dfccb51a10b47b6fd625e",
+        "android_client_info": {
+          "package_name": "com.example.uncle_sam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195084400379-vplm0v138htg6t8f56oh31regf76v1lj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs0jlfT0imsFRkXwkv286QKX0VdQH2lCU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195084400379-vplm0v138htg6t8f56oh31regf76v1lj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "195084400379-hb5f4os30qrrf01cmvkft4n0jlinlnkq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.uncleSam"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
